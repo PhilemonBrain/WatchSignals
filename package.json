@@ -1,0 +1,12 @@
+{
+  "name": "WatchSignals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PhilemonBrain/WatchSignals.git",
+  "author": "Brain Philemon <philbrainy@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^13.6.0"
+  }
+}
