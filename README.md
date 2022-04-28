@@ -3,7 +3,7 @@ Web Scraping Assessment Task
 
 
 This Project will visit "https://www.chronext.com/mens-watches", change location if necessary and then scrap
-all the contents of all the pages and save to a CSV file.
+all the contents of all the pages and save to a CSV file (output.csv).
 
 To accomodate for slower networks and complete page content loads, occasionally we manually call waitTimeout.
 
