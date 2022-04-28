@@ -84,7 +84,10 @@ async function nextPages() {
     .waitForSelector(nextPageElement)
     .catch(() => false);
   while (nextPageLink) {
-    await Promise.all([page.waitForNavigation(), nextPageLink.click()]);
+    await Promise.all([
+      page.waitForNavigation(),
+      nextPageLink.click().catch(() => process.exit(0)),
+    ]);
     await page.waitForTimeout(5000);
     await page.waitForSelector(productListSelector);
     await page.waitForSelector(paginationSelector);
@@ -93,7 +96,7 @@ async function nextPages() {
     const pdList = await page.$$(productTileSelector);
     await getProductsAndDetails(pdList);
   }
-  await browser.close();
+  process.exit(0);
 }
 
 async function getProductsAndDetails(productListElement) {
